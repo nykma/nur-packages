@@ -6,4 +6,5 @@
   overlays = import ./overlays;
 
   cups-detonger = pkgs.callPackage ./pkgs/cups-detonger { };
+  safeheron-crypto-suites = pkgs.callPackage ./pkgs/safeheron-crypto-suites { };
 }
