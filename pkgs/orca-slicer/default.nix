@@ -21,7 +21,7 @@ appimageTools.wrapType2 {
 
   extraPkgs = pkgs: with pkgs; [
     webkitgtk
-    gst_app_1.gstreamer # For camera streaming. TODO: need test
+    gst_all_1.gstreamer # For camera streaming. TODO: need test
   ];
   extraInstallCommands = ''
                          install -m 444 -D ${extractedContents}/OrcaSlicer.desktop $out/share/applications/OrcaSlicer.desktop
