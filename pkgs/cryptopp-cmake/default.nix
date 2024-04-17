@@ -31,4 +31,12 @@ stdenv.mkDerivation {
   patches = [
     ./patches/dir.patch
   ];
+
+  meta = {
+    homepage = "https://github.com/abdes/cryptopp-cmake";
+    description = "Crypto++ library with CMake support";
+    license = lib.licenses.bsd3;
+    platforms = lib.platforms.linux ++ lib.platforms.darwin;
+    sourceProvenance = with lib.sourceTypes;[fromSource];
+  };
 }
