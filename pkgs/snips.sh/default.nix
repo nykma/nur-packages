@@ -14,7 +14,6 @@ let
 in
 buildGoModule {
   inherit pname vendorHash src;
-  name = pname;
 
   buildInputs = with pkgs; [
     libtensorflow
