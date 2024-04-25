@@ -13,7 +13,7 @@ let
   };
 in
 buildGoModule {
-  inherit pname vendorHash src;
+  inherit pname vendorHash src version;
 
   buildInputs = with pkgs; [
     libtensorflow
