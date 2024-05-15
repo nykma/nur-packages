@@ -15,12 +15,11 @@ in
 appimageTools.wrapType2 {
   inherit pname version src;
 
-  extraPkgs = pkgs: with pkgs; [
-    ];
   extraInstallCommands = ''
                          install -m 444 -D ${extractedContents}/onekey-wallet.desktop $out/share/applications/onekey-wallet.desktop
                          install -m 444 -D ${extractedContents}/usr/share/icons/hicolor/0x0/apps/onekey-wallet.png \
                            $out/share/icons/hicolor/512x512/onekey-wallet.png
+                         substituteInPlace $out/share/applications/onekey-wallet.desktop --replace-fail 'Exec=AppRun --no-sandbox' 'Exec=${pname}'
                          '';
 
   # You should also add udev rules into your system to make hardware wallet connect to your system
