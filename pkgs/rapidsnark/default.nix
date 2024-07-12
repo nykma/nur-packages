@@ -1,14 +1,16 @@
-{ lib, fetchgit, stdenv,
+{ lib, fetchFromGitHub, stdenv,
   gmp,
   cmake, gnum4, nasm,
   ... }:
 let
   version = "0.0.3";
-  src = fetchgit {
+  src = fetchFromGitHub {
     rev = "b17e6fed08e9ceec3518edeffe4384313f91e9ad";
-    url = "https://github.com/iden3/rapidsnark.git";
-    hash = "sha256-ztNO4Ecw/8s0PHKMsht8vWwxHmXkc5GgjBQBEDp2zPc=";
-    deepClone = true;
+    owner = "iden3";
+    repo = "rapidsnark";
+    hash = "sha256-23h06Q6vk4rfKO8VwD7Y+Gu6HcSzG0GXSxNeG3agW6k=";
+    fetchSubmodules = true;
+    leaveDotGit = false;
   };
   buildInputs = [ gmp ];
   nativeBuildInputs = [ cmake gnum4 nasm ];
