@@ -36,6 +36,6 @@ rustPlatform.buildRustPackage {
     description = "Modular, contributor-friendly and blazing-fast implementation of the Ethereum protocol, in Rust";
     homepage = "https://reth.rs";
     license = licenses.asl20;
-    platforms = [ "x86_64-linux" "aarch64_linux" "x86_64-darwin" "aarch64_darwin" ];
+    platforms = [ "x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin" ];
   };
 }
