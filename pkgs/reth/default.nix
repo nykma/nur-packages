@@ -1,7 +1,7 @@
 {
   lib, fetchFromGitHub, makeRustPlatform, rust-bin,
   llvmPackages, pkg-config,
-  libgcc,
+  libgcc, glibc,
 }:
 let
   pname = "reth";
@@ -25,7 +25,7 @@ rustPlatform.buildRustPackage {
   };
 
   nativeBuildInputs = [ llvmPackages.clang pkg-config ];
-  buildInputs = [ libgcc ];
+  buildInputs = [ libgcc glibc ];
 
   LIBCLANG_PATH = "${llvmPackages.libclang.lib}/lib";
 

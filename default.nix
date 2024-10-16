@@ -1,4 +1,8 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs ? import <nixpkgs> {
+   overlays = [
+      (import (fetchTarball "https://github.com/oxalica/rust-overlay/archive/master.tar.gz"))
+    ];
+} }:
 
 rec {
   lib = import ./lib { inherit pkgs; };
