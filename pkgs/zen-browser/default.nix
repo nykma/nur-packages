@@ -1,8 +1,8 @@
-{ lib, appimageTools, fetchurl }:
+{ lib, appimageTools, fetchurl, gitUpdater }:
 let
   pname = "zen-browser";
-  version = "1.0.1-a.17";
-  sha256 = "sha256-gvaIaMn6FHa3X/9TJQAtV1p1qjyfmhQlr7X59C2s+tY=";
+  version = "twilight";
+  sha256 = "sha256-wXK1ko+6r1JCsMxYZ6NWcrCMFYbuUys37MbQofxC21w=";
   url = "https://github.com/zen-browser/desktop/releases/download/${version}/zen-specific.AppImage";
   src = fetchurl {
     inherit url sha256;
@@ -25,5 +25,12 @@ appimageTools.wrapType2 {
     homepage = "https://zen-browser.app";
     license = licenses.mpl20;
     platforms = [ "x86_64-linux" ];
+  };
+
+  passthru.updateScript = gitUpdater {
+    rev-prefix = "v";
+    odd-unstable = false;
+    patchlevel-unstable = false;
+    url = "https://github.com/zen-browser/desktop.git";
   };
 }
