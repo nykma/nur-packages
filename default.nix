@@ -36,6 +36,7 @@ rec {
   v2ray-rules-dat = pkgs.callPackage ./pkgs/v2ray-rules-dat { inherit v2dat; };
   zen-browser = pkgs.callPackage ./pkgs/zen-browser { };
   reth = pkgs.callPackage ./pkgs/reth { inherit (pkgs) rust-bin; };
+  mergiraf = pkgs.callPackage ./pkgs/mergiraf { inherit (pkgs) rust-bin; };
 
   font-iosvmata = pkgs.callPackage ./pkgs/font-iosvmata { };
   font-pragmasevka = pkgs.callPackage ./pkgs/font-pragmasevka { };
