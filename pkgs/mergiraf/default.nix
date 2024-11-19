@@ -5,12 +5,12 @@
 }:
 let
   pname = "mergiraf";
-  version = "0.2.0";
+  version = "0.3.1";
   src = builtins.fetchGit {
     url = "https://codeberg.org/mergiraf/mergiraf.git";
     ref = "v${version}";
     allRefs = true;
-    rev = "5e0e340b1f666c36720531e0a7ac7b5417c96031";
+    rev = "6e40800d33640217d83177e7dfaf4a90a739d81e";
   };
 
   rustPlatform = makeRustPlatform {
@@ -22,11 +22,8 @@ rustPlatform.buildRustPackage {
   inherit pname version src;
   cargoLock = {
     lockFile = "${src}/Cargo.lock";
-    outputHashes = {
-      "tree-sitter-go-0.23.1" = "sha256-elPqkvVYs0vADOuN/umDteWP5hqcXhQAoSkqYDtTxaU=";
-      "tree-sitter-xml-0.7.0" = "sha256-RTWvOUAs3Uql9DKsP1jf9FZZHaZORE40GXd+6g6RQZw=";
-      "tree-sitter-yaml-0.6.1" = "sha256-gS+SjOnGl/86U9VV/y1ca7naYIe7DAOvOv++jCRLTKo=";
-    };
+    # outputHashes = {
+    # };
   };
   nativeBuildInputs = [ git ];
   meta = with lib; {
