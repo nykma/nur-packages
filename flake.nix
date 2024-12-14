@@ -42,5 +42,17 @@
           pkgs = nixpkgsFor.${system};
         in
         pkgs.lib.filterAttrs (_: v: pkgs.lib.isDerivation v) self.legacyPackages.${system});
+      devShells = forAllSystems (system:
+        let
+          pkgs = nixpkgsFor.${system};
+        in {
+          default = pkgs.mkShell {
+            buildInputs = with pkgs; [
+              nix-update
+              just
+            ];
+          };
+        }
+      );
     };
 }
