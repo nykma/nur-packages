@@ -5,12 +5,12 @@
 }:
 let
   pname = "mergiraf";
-  version = "0.3.1";
+  version = "0.4.0";
   src = builtins.fetchGit {
     url = "https://codeberg.org/mergiraf/mergiraf.git";
     ref = "v${version}";
     allRefs = true;
-    rev = "6e40800d33640217d83177e7dfaf4a90a739d81e";
+    rev = "08cefbaa8bda56aa901d939f80a517d03e0fbb7f";
   };
 
   rustPlatform = makeRustPlatform {
