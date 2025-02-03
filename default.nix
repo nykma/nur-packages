@@ -6,7 +6,7 @@
   },
   pkgs-protobuf320 ? import (builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs/archive/656b40c807e4c4965198a68d1f784492397fef6c.tar.gz";
-    sha256 = "sha256:0j3sxszl00kbw4i4c5dd4ip6a7f0yd3gx2y7iwqy5wkfmwp4k1fl";
+    sha256 = "sha256-XalzeRAiECNU0WWxPK9U8+MmEGRVJCA2Lfs0b6gjblo=";
   }) { },
 }:
 
