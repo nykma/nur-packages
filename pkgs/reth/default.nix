@@ -5,9 +5,9 @@
 }:
 let
   pname = "reth";
-  version = "1.1.0";
-  hash = "sha256-VwBVfEJUU9ttxfKBHxCcIZjbdlLKe4fGOBUo0w9dsso=";
-  cargoHash = "sha256-lf6B1UZALnf/XExAWUYTm7RHjXXaLCYEHxq00/1nFCQ=";
+  version = "1.1.5";
+  hash = "sha256-bQ45SJCdIEtBqhh/2bQh0CS8KC9eI4zF38LSL/LDOSk=";
+  cargoHash = "sha256-VEwDru2n1iY3DKN8GhPtzUAeKDkH5IpkqdrQy/2aitw=";
   rustPlatform = makeRustPlatform {
     cargo = rust-bin.selectLatestNightlyWith (toolchain: toolchain.default);
     rustc = rust-bin.selectLatestNightlyWith (toolchain: toolchain.default);
