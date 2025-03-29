@@ -48,6 +48,7 @@
         in {
           default = pkgs.mkShell {
             buildInputs = with pkgs; [
+              nixd
               nix-update
               just
             ];
