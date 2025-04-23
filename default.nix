@@ -41,4 +41,7 @@ rec {
   font-pragmasevka = pkgs.callPackage ./pkgs/font-pragmasevka { };
   font-sarasa-term-sc-nerd = pkgs.callPackage ./pkgs/font-sarasa-term-sc-nerd { };
   font-ibm-plex-sans-cjk = pkgs.callPackage ./pkgs/font-ibm-plex-sans-cjk { };
+
+  # ZKVM
+  riscv-gnu-toolchain = pkgs.callPackage ./pkgs/zkvm/riscv-gnu-toolchain { };
 }
