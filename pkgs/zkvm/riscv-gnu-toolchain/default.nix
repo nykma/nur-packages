@@ -4,13 +4,13 @@
 }:
 let
   pname = "riscv-gnu-toolchain";
-  version = "2025.01.20";
+  version = "2025.05.10";
   src = fetchgit {
     url = "https://github.com/riscv-collab/riscv-gnu-toolchain.git";
     rev = "refs/tags/${version}";
-    hash = "sha256-M+/e4SRYUavt0eJ6rSdjI5t7bcXoF/Y7ifp4JNqhTko=";
+    hash = "sha256-aCCjuQreHThX9UwaObvx8HS60TOxf8codqJRJhThxe8=";
     fetchSubmodules = true;
-    leaveDotGit = false;
+    leaveDotGit = true;
   };
 
 in
