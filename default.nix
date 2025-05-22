@@ -8,6 +8,10 @@
     url = "https://github.com/NixOS/nixpkgs/archive/656b40c807e4c4965198a68d1f784492397fef6c.tar.gz";
     sha256 = "sha256-XalzeRAiECNU0WWxPK9U8+MmEGRVJCA2Lfs0b6gjblo=";
   }) { },
+  pkgs-protobuf293 ? import (builtins.fetchTarball {
+    url = "https://github.com/NixOS/nixpkgs/archive/656b40c807e4c4965198a68d1f784492397fef6c.tar.gz";
+    sha256 = "";
+  }) { },
 }:
 
 rec {
@@ -35,6 +39,7 @@ rec {
   v2dat = pkgs.callPackage ./pkgs/v2dat { };
   v2ray-rules-dat = pkgs.callPackage ./pkgs/v2ray-rules-dat { inherit v2dat; };
   reth = pkgs.callPackage ./pkgs/reth { inherit (pkgs) rust-bin; };
+  noir = pkgs.callPackage ./pkgs/noir { inherit (pkgs) rust-bin; protobuf_29 = pkgs-protobuf293.protobuf_29; };
   mergiraf = pkgs.callPackage ./pkgs/mergiraf { inherit (pkgs) rust-bin; };
 
   font-iosvmata = pkgs.callPackage ./pkgs/font-iosvmata { };
