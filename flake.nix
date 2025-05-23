@@ -56,6 +56,7 @@
               nixd
               nix-update
               just
+              cachix
             ];
           };
         }

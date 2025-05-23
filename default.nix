@@ -9,8 +9,8 @@
     sha256 = "sha256-XalzeRAiECNU0WWxPK9U8+MmEGRVJCA2Lfs0b6gjblo=";
   }) { },
   pkgs-protobuf293 ? import (builtins.fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/656b40c807e4c4965198a68d1f784492397fef6c.tar.gz";
-    sha256 = "";
+    url = "https://github.com/NixOS/nixpkgs/archive/3a7baab73a629847afbcca8a52765c0b5fec49ae.tar.gz";
+    sha256 = "sha256:0dy58m7q7k03rcwqvq4mg33syswvf0qg7ypxzlxa1nm5yvwcilhb";
   }) { },
 }:
 
