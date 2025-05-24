@@ -1,12 +1,12 @@
 {
+  version ? "1.0.0-beta.6",
+  hash ? "sha256-hy/FkQ2osn1I9oztC754W580OEgvNJ55FcnfTxd2ock=",
+  cargoHash ? "sha256-oD5G1UwmbW5hWnCo52VsftUSc6ww+8opinA6iw9Yagc=",
   lib, fetchFromGitHub, makeRustPlatform, rust-bin,
   protobuf_29, # 29.3
 }:
 let
   pname = "noir";
-  version = "1.0.0-beta.6";
-  hash = "sha256-hy/FkQ2osn1I9oztC754W580OEgvNJ55FcnfTxd2ock=";
-  cargoHash = "sha256-oD5G1UwmbW5hWnCo52VsftUSc6ww+8opinA6iw9Yagc=";
   rustPlatform = makeRustPlatform {
     cargo = rust-bin.stable.latest.default;
     rustc = rust-bin.stable.latest.default;
