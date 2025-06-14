@@ -1,7 +1,7 @@
 {
-  version ? "1.0.0-beta.6",
-  hash ? "sha256-hy/FkQ2osn1I9oztC754W580OEgvNJ55FcnfTxd2ock=",
-  cargoHash ? "sha256-oD5G1UwmbW5hWnCo52VsftUSc6ww+8opinA6iw9Yagc=",
+  version ? "1.0.0-beta.7",
+  hash ? "sha256-7MZ2hh8yRQlJ7/cKGF4CEg25s4CFXnOVv4IRQBlCNEU=",
+  cargoHash ? "sha256-QupLrl8U7vdp1Q/9IirW20T4tha+T1/XXCWZGyzeMCo=",
   lib, fetchFromGitHub, makeRustPlatform, rust-bin,
   protobuf_29, # 29.3
 }:
