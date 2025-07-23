@@ -38,10 +38,10 @@ rustPlatform.buildRustPackage {
     license = licenses.asl20;
     platforms = [
       "x86_64-linux"
+      "aarch64-darwin"
       # FIXME: enable until proper cargoHash for each platform is found
       # "aarch64-linux"
       # "x86_64-darwin"
-      # "aarch64-darwin"
     ];
   };
 }
