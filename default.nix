@@ -41,6 +41,8 @@ rec {
   reth = pkgs.callPackage ./pkgs/reth { inherit (pkgs) rust-bin; };
   noir = pkgs.callPackage ./pkgs/noir { inherit (pkgs) rust-bin; protobuf_29 = pkgs-protobuf293.protobuf_29; };
   mergiraf = pkgs.callPackage ./pkgs/mergiraf { inherit (pkgs) rust-bin; };
+  libjportaudio = pkgs.callPackage ./pkgs/libjportaudio { };
+  beatoraja = pkgs.callPackage ./pkgs/beatoraja { inherit libjportaudio; };
 
   font-iosvmata = pkgs.callPackage ./pkgs/font-iosvmata { };
   font-pragmasevka = pkgs.callPackage ./pkgs/font-pragmasevka { };
