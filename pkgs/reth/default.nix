@@ -5,24 +5,22 @@
 }:
 let
   pname = "reth";
-  version = "1.3.12";
-  hash = "sha256-59XUrMaXMiqSELQX8i7eK4Eo8YfGjPVZHT6q+rxoSPs=";
-  cargoHash = "sha256-FHQ+iPcjxwcY7uoZMXlm/lRoVA5E5wRg7qFgJe+VSEc=";
+  version = "1.6.0";
+  hash = "sha256-dT5H+0lfkf9QeWAV7BsCpctzNCwF3oW9Gn7CM7hexDs=";
+  cargoHash = "sha256-jWSeTGtq3K7vuhOhOa3BiNJ3lnhNNG8LYWr/xFFljAM=";
   rustPlatform = makeRustPlatform {
     cargo = rust-bin.selectLatestNightlyWith (toolchain: toolchain.default);
     rustc = rust-bin.selectLatestNightlyWith (toolchain: toolchain.default);
   };
-
-in
-rustPlatform.buildRustPackage {
-  inherit pname version cargoHash;
-
   src = fetchFromGitHub {
     inherit hash;
     owner = "paradigmxyz";
     repo = pname;
     rev = "v${version}";
   };
+in
+rustPlatform.buildRustPackage {
+  inherit pname version cargoHash src;
 
   nativeBuildInputs = [ llvmPackages.clang pkg-config ];
   buildInputs = [ libgcc glibc ];

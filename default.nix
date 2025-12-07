@@ -29,6 +29,7 @@ rec {
     inherit (pkgs-protobuf320) protobuf3_20;
   };
   cryptopp-cmake = pkgs.callPackage ./pkgs/cryptopp-cmake { };
+  dotnet-ef = pkgs.callPackage ./pkgs/dotnet-ef { };
   orca-slicer = pkgs.callPackage ./pkgs/orca-slicer { };
   snips-sh = pkgs.callPackage ./pkgs/snips.sh { };
   font-apple-color-emoji = pkgs.callPackage ./pkgs/font-apple-color-emoji { };

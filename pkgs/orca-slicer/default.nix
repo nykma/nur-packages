@@ -2,9 +2,9 @@
   cacert, glib-networking, ... }:
 let
   pname = "orca-slicer";
-  version = "2.3.0";
-  sha256 = "sha256-cwediOw28GFdt5GdAKom/jAeNIum4FGGKnz8QEAVDAM=";
-  url = "https://github.com/SoftFever/OrcaSlicer/releases/download/v${version}/OrcaSlicer_Linux_AppImage_V${version}.AppImage";
+  version = "2.3.1";
+  sha256 = "sha256-8ZnlQIkU79u7+k/WdSzWrUcnIJtIi8R7/5oNpfBTpwE=";
+  url = "https://github.com/OrcaSlicer/OrcaSlicer/releases/download/v${version}/OrcaSlicer_Linux_AppImage_Ubuntu2404_V${version}.AppImage";
   src = fetchurl {
     inherit url sha256;
   };
@@ -19,7 +19,7 @@ appimageTools.wrapType2 {
   inherit pname version src;
 
   extraPkgs = pkgs: with pkgs; [
-    webkitgtk
+    webkitgtk_4_1
     gst_all_1.gstreamer # For camera streaming. TODO: need test
     gst_all_1.gst-libav
     gst_all_1.gst-plugins-bad
