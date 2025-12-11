@@ -38,7 +38,6 @@ rec {
   aws-lambda-ric-nodejs = pkgs.callPackage ./pkgs/aws-lambda-ric-nodejs { };
   v2dat = pkgs.callPackage ./pkgs/v2dat { };
   v2ray-rules-dat = pkgs.callPackage ./pkgs/v2ray-rules-dat { inherit v2dat; };
-  reth = pkgs.callPackage ./pkgs/reth { inherit (pkgs) rust-bin; };
   noir = pkgs.callPackage ./pkgs/noir { inherit (pkgs) rust-bin; protobuf_29 = pkgs-protobuf293.protobuf_29; };
   mergiraf = pkgs.callPackage ./pkgs/mergiraf { inherit (pkgs) rust-bin; };
   libjportaudio = pkgs.callPackage ./pkgs/libjportaudio { };
@@ -50,5 +49,5 @@ rec {
   font-ibm-plex-sans-cjk = pkgs.callPackage ./pkgs/font-ibm-plex-sans-cjk { };
 
   # ZKVM
-  riscv-gnu-toolchain = pkgs.callPackage ./pkgs/zkvm/riscv-gnu-toolchain { };
+  # riscv-gnu-toolchain = pkgs.callPackage ./pkgs/zkvm/riscv-gnu-toolchain { };
 }
